@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Posts | Adrian Tan</title>
+    
+    <meta name="description" content="Complete archive of all posts by Adrian Tan on Agentic AI, Fintech, and Future of Banking">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=IBM+Plex+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #00ff88;
+            --accent: #ff006e;
+            --text: #e0e0e0;
+            --text-dim: #8892b0;
+            --background: #020617;
+            --surface: #0f172a;
+            --border: #1e293b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'IBM Plex Sans', sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header */
+        header {
+            padding: 3rem 0 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .back-link {
+            font-family: 'Space Mono', monospace;
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--primary);
+        }
+
+        .back-link::before {
+            content: 'â† ';
+            color: var(--primary);
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin: 2rem 0 1rem;
+            font-family: 'Space Mono', monospace;
+        }
+
+        .page-subtitle {
+            color: var(--text-dim);
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+
+        /* Year Groups */
+        .year-group {
+            margin-bottom: 4rem;
+        }
+
+        .year-heading {
+            font-family: 'Space Mono', monospace;
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border);
+        }
+
+        /* Post List (Compact) */
+        .post-list-item {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .post-list-item:hover {
+            border-color: var(--primary);
+            transform: translateX(10px);
+        }
+
+        .post-list-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.5rem;
+            gap: 1rem;
+        }
+
+        .post-list-title {
+            font-size: 1.2rem;
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .post-list-date {
+            font-family: 'Space Mono', monospace;
+            color: var(--accent);
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+
+        .post-list-excerpt {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 0.8rem;
+        }
+
+        .post-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.7rem;
+            padding: 0.3rem 0.7rem;
+            background: rgba(0, 255, 136, 0.1);
+            color: var(--primary);
+            border-radius: 3px;
+            border: 1px solid rgba(0, 255, 136, 0.2);
+        }
+
+        /* Stats */
+        .archive-stats {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+            display: flex;
+            gap: 3rem;
+            justify-content: center;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Space Mono', monospace;
+            font-size: 2rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            margin-top: 0.3rem;
+        }
+
+        /* Footer */
+        footer {
+            padding: 3rem 0;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            font-family: 'Space Mono', monospace;
+            margin-top: 4rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+
+            .post-list-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .archive-stats {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+
+            <h1 class="page-title">All Posts</h1>
+            <p class="page-subtitle">Complete archive of writings on Agentic AI, Fintech, and Future of Banking</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Archive Stats -->
+            <div class="archive-stats">
+                <div class="stat">
+                    <div class="stat-number">52</div>
+                    <div class="stat-label">Total Posts</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Focus Areas</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">Weekly</div>
+                    <div class="stat-label">Publishing Cadence</div>
+                </div>
+            </div>
+
+            <!-- 2026 Posts -->
+            <div class="year-group">
+                <h2 class="year-heading">2026</h2>
+                
+                <a href="posts/agentic-banking-layer.html" class="post-list-item">
+                    <div class="post-list-header">
+                        <h3 class="post-list-title">The Agentic Banking Layer: Why Your Bank Needs an AI Strategy</h3>
+                        <span class="post-list-date">Jan 27</span>
+                    </div>
+                    <p class="post-list-excerpt">
+                        As Claude and GPT models gain computer use capabilities, banks face a critical question...
+                    </p>
+                    <div class="post-tags">
+                        <span class="tag">Agentic AI</span>
+                        <span class="tag">Banking</span>
+                    </div>
+                </a>
+
+                <a href="posts/weekly-roundup-jan-20.html" class="post-list-item">
+                    <div class="post-list-header">
+                        <h3 class="post-list-title">Weekly Roundup: AI Agents and the Financial Services Stack</h3>
+                        <span class="post-list-date">Jan 20</span>
+                    </div>
+                    <p class="post-list-excerpt">
+                        This week's developments in agentic AI and how they're reshaping financial infrastructure...
+                    </p>
+                    <div class="post-tags">
+                        <span class="tag">Weekly Roundup</span>
+                        <span class="tag">AI Agents</span>
+                    </div>
+                </a>
+
+                <!-- ADD MORE 2026 POSTS HERE -->
+            </div>
+
+            <!-- 2025 Posts -->
+            <div class="year-group">
+                <h2 class="year-heading">2025</h2>
+                
+                <a href="posts/weekly-roundup-dec-2025.html" class="post-list-item">
+                    <div class="post-list-header">
+                        <h3 class="post-list-title">Weekly Roundup: OpenAI's Operator, Anthropic's Model Context Protocol</h3>
+                        <span class="post-list-date">Dec 15</span>
+                    </div>
+                    <p class="post-list-excerpt">
+                        OpenAI launches Operator for web automation, Anthropic releases MCP for agent communication...
+                    </p>
+                    <div class="post-tags">
+                        <span class="tag">Weekly Roundup</span>
+                        <span class="tag">AI Agents</span>
+                    </div>
+                </a>
+
+                <a href="posts/lean-startup-to-ai-startup.html" class="post-list-item">
+                    <div class="post-list-header">
+                        <h3 class="post-list-title">From Lean Startup to AI Startup: What Changes, What Stays</h3>
+                        <span class="post-list-date">Nov 10</span>
+                    </div>
+                    <p class="post-list-excerpt">
+                        Reflecting on lean startup principles and how they apply in the age of AI...
+                    </p>
+                    <div class="post-tags">
+                        <span class="tag">Startups</span>
+                        <span class="tag">AI</span>
+                    </div>
+                </a>
+
+                <!-- ADD MORE 2025 POSTS HERE -->
+            </div>
+
+            <!-- Add more year groups as needed -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Post Title | Adrian Tan</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Brief description of your post">
+    <meta name="keywords" content="Agentic AI, Fintech, Banking">
+    <meta name="author" content="Adrian Tan">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=IBM+Plex+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #00ff88;
+            --accent: #ff006e;
+            --text: #e0e0e0;
+            --text-dim: #8892b0;
+            --background: #020617;
+            --surface: #0f172a;
+            --border: #1e293b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'IBM Plex Sans', sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header */
+        header {
+            padding: 3rem 0 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .back-link {
+            font-family: 'Space Mono', monospace;
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--primary);
+        }
+
+        .back-link::before {
+            content: '← ';
+            color: var(--primary);
+        }
+
+        /* Article */
+        article {
+            padding: 4rem 0;
+        }
+
+        .post-header {
+            margin-bottom: 3rem;
+        }
+
+        .post-meta {
+            font-family: 'Space Mono', monospace;
+            color: var(--accent);
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .post-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .tag {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.7rem;
+            padding: 0.3rem 0.7rem;
+            background: rgba(0, 255, 136, 0.1);
+            color: var(--primary);
+            border-radius: 3px;
+            border: 1px solid rgba(0, 255, 136, 0.2);
+        }
+
+        /* Content */
+        .post-content {
+            color: var(--text-dim);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .post-content h2 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin: 3rem 0 1.5rem;
+            font-family: 'Space Mono', monospace;
+        }
+
+        .post-content h3 {
+            color: var(--text);
+            font-size: 1.4rem;
+            margin: 2rem 0 1rem;
+        }
+
+        .post-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .post-content a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--primary);
+            transition: opacity 0.3s ease;
+        }
+
+        .post-content a:hover {
+            opacity: 0.7;
+        }
+
+        .post-content ul, .post-content ol {
+            margin: 1.5rem 0 1.5rem 2rem;
+        }
+
+        .post-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .post-content blockquote {
+            border-left: 3px solid var(--primary);
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            color: var(--text);
+            font-style: italic;
+        }
+
+        .post-content code {
+            background: var(--surface);
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.9em;
+            color: var(--primary);
+        }
+
+        .post-content pre {
+            background: var(--surface);
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 2rem 0;
+            border: 1px solid var(--border);
+        }
+
+        .post-content pre code {
+            background: none;
+            padding: 0;
+        }
+
+        /* Footer */
+        footer {
+            padding: 3rem 0;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            font-family: 'Space Mono', monospace;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .post-content {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="../index.html" class="back-link">Back to Home</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <article>
+                <div class="post-header">
+                    <time class="post-meta" datetime="2026-01-30">January 30, 2026</time>
+                    <h1>Your Post Title Goes Here</h1>
+                    <div class="post-tags">
+                        <span class="tag">Agentic AI</span>
+                        <span class="tag">Fintech</span>
+                    </div>
+                </div>
+
+                <div class="post-content">
+                    <!-- START WRITING YOUR POST HERE -->
+                    
+                    <p>
+                        Your opening paragraph. Make it compelling. Get to the point fast.
+                    </p>
+
+                    <h2>Your First Section</h2>
+                    
+                    <p>
+                        Write your content here. Keep paragraphs short and punchy.
+                    </p>
+
+                    <p>
+                        Another paragraph. Use concrete examples.
+                    </p>
+
+                    <h2>Your Second Section</h2>
+                    
+                    <p>
+                        More content. You can include:
+                    </p>
+
+                    <ul>
+                        <li>Bullet points for lists</li>
+                        <li>Links to sources</li>
+                        <li>Code snippets if needed</li>
+                    </ul>
+
+                    <blockquote>
+                        "Use blockquotes for important quotes or callouts."
+                    </blockquote>
+
+                    <h2>Conclusion</h2>
+                    
+                    <p>
+                        Wrap it up. One actionable insight. No fluff.
+                    </p>
+
+                    <!-- END OF YOUR POST -->
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Adrian Tan (iadriantan) · Building in public · Thinking in code</p>
+        </div>
+    </footer>
+</body>
+</html>
