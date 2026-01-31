@@ -3,218 +3,307 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weekly AI & FinTech Roundup: January 28-30, 2026</title>
+    <title>Adrian Tan | Agentic AI, Fintech & Future of Banking</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Adrian Tan explores the intersection of Agentic AI, Fintech, and the Future of Banking. Weekly insights on technology's transformation of finance.">
+    <meta name="keywords" content="Adrian Tan, iadriantan, Agentic AI, Fintech, Future of Banking">
+    <meta name="author" content="Adrian Tan">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=IBM+Plex+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #00ff88;
+            --accent: #ff006e;
+            --text: #e0e0e0;
+            --text-dim: #8892b0;
+            --background: #020617;
+            --surface: #0f172a;
+            --border: #1e293b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            line-height: 1.7;
-            color: #1a1a1a;
-            max-width: 720px;
+            font-family: 'IBM Plex Sans', sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
             margin: 0 auto;
-            padding: 40px 20px;
-            background: #fafafa;
+            padding: 0 2rem;
         }
-        .back-link {
-            color: #666;
+
+        /* Header */
+        header {
+            padding: 3rem 0 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .site-title {
+            font-family: 'Space Mono', monospace;
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .site-description {
+            color: var(--text-dim);
+            font-size: 1.1rem;
+        }
+
+        nav {
+            margin-top: 2rem;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-family: 'Space Mono', monospace;
+            color: var(--text-dim);
             text-decoration: none;
-            font-size: 14px;
-            display: inline-block;
-            margin-bottom: 30px;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
         }
-        .back-link:hover { color: #333; }
-        .date {
-            color: #888;
-            font-size: 14px;
-            margin-bottom: 10px;
+
+        nav a:hover {
+            color: var(--primary);
         }
-        h1 {
-            font-size: 32px;
-            font-weight: 700;
-            margin-bottom: 15px;
-            line-height: 1.2;
+
+        /* Main Content */
+        main {
+            padding: 4rem 0;
         }
-        .tags {
-            margin-bottom: 35px;
-        }
-        .tag {
-            display: inline-block;
-            background: #e8e8e8;
-            color: #555;
-            padding: 4px 12px;
-            border-radius: 15px;
-            font-size: 12px;
-            margin-right: 8px;
-        }
-        .intro {
-            font-size: 20px;
-            color: #333;
-            font-weight: 500;
-            margin-bottom: 25px;
-            line-height: 1.5;
-        }
-        .summary {
-            background: #fff;
-            border-left: 3px solid #333;
-            padding: 25px 30px;
-            margin-bottom: 40px;
-            border-radius: 0 8px 8px 0;
-        }
-        .summary p {
-            margin-bottom: 18px;
-            font-size: 16px;
-        }
-        .summary p:last-child {
-            margin-bottom: 0;
-        }
-        h2 {
-            font-size: 22px;
-            margin: 40px 0 20px;
-            color: #1a1a1a;
-        }
-        h3 {
-            font-size: 16px;
-            color: #666;
+
+        .section-title {
+            font-family: 'Space Mono', monospace;
+            color: var(--primary);
+            font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin: 35px 0 20px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #ddd;
+            margin-bottom: 2rem;
         }
-        .story {
-            margin-bottom: 25px;
-            padding-bottom: 25px;
-            border-bottom: 1px solid #eee;
+
+        /* Blog Posts */
+        .posts {
+            margin-bottom: 6rem;
         }
-        .story:last-child {
-            border-bottom: none;
-        }
-        .story-title {
-            font-weight: 600;
-            color: #1a1a1a;
-            margin-bottom: 8px;
-        }
-        .story-description {
-            color: #444;
-            font-size: 15px;
-            margin-bottom: 8px;
-        }
-        .story-source {
-            font-size: 13px;
-        }
-        .story-source a {
-            color: #0066cc;
+
+        .post-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            display: block;
             text-decoration: none;
+            color: inherit;
         }
-        .story-source a:hover {
-            text-decoration: underline;
+
+        .post-card:hover {
+            border-color: var(--primary);
+            transform: translateX(10px);
         }
-        .footer {
-            margin-top: 50px;
-            padding-top: 25px;
-            border-top: 1px solid #ddd;
-            color: #888;
-            font-size: 13px;
+
+        .post-date {
+            font-family: 'Space Mono', monospace;
+            color: var(--accent);
+            font-size: 0.85rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .post-card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: var(--text);
+        }
+
+        .post-excerpt {
+            color: var(--text-dim);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .post-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.7rem;
+            padding: 0.3rem 0.7rem;
+            background: rgba(0, 255, 136, 0.1);
+            color: var(--primary);
+            border-radius: 3px;
+            border: 1px solid rgba(0, 255, 136, 0.2);
+        }
+
+        /* About Section */
+        .about {
+            padding: 3rem 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .about-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid var(--primary);
+            background: var(--surface);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        .about-photo img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .about-text h2 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .about-text p {
+            color: var(--text-dim);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            padding: 0.6rem 1.2rem;
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text-dim);
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-family: 'Space Mono', monospace;
+            transition: all 0.3s ease;
+        }
+
+
+        footer {
+            padding: 3rem 0;
+            border-top: 1px solid var(--border);
             text-align: center;
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            font-family: 'Space Mono', monospace;
         }
-        .footer a {
-            color: #666;
-            text-decoration: none;
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .about-photo {
+                margin: 0 auto;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
         }
     </style>
 </head>
 <body>
-    <a href="/" class="back-link">← Back to Home</a>
+    <header>
+        <div class="container">
+            <h1 class="site-title">iadriantan</h1>
+            <p class="site-description">Exploring Agentic AI, Fintech & the Future of Banking</p>
+            <nav>
+                <a href="#posts">Posts</a>
+                <a href="#about">About</a>
+                <a href="https://twitter.com/iadriantan" target="_blank">X</a>
+                <a href="https://linkedin.com/in/iadriantan" target="_blank">LinkedIn</a>
+            </nav>
+        </div>
+    </header>
 
-    <p class="date">January 30, 2026</p>
+    <main>
+        <div class="container">
 
-    <h1>Weekly AI & FinTech Innovation Roundup: January 28-30, 2026</h1>
 
-    <div class="tags">
-        <span class="tag">Weekly Roundup</span>
-        <span class="tag">Agentic AI</span>
-        <span class="tag">Banking</span>
-        <span class="tag">Fintech</span>
-    </div>
+            <!-- About Section -->
+            <section class="about" id="about">
+                <h2 class="section-title">About</h2>
+                <div class="about-content">
+                    <div class="about-photo">
+                        <!-- Replace AT with your actual photo -->
+                        <!-- <img src="images/adrian-tan.jpg" alt="Adrian Tan"> -->
+                        AT
+                    </div>
+                    <div class="about-text">
+                        <h2>Adrian Tan</h2>
+                        <p>
+                            I spent a decade helping startups find product-market fit as an entrepreneur 
+                            and lean startup coach. Now I'm watching AI agents eat the world—starting with banking.
+                        </p>
+                        <p>
+                            This site tracks three converging forces: <strong>Agentic AI</strong> (AI that 
+                            actually does things), <strong>Fintech</strong> (rebuilding financial infrastructure), 
+                            and the <strong>Future of Banking</strong> (adapt or get disrupted).
+                        </p>
+                        <p>
+                            Weekly roundups of what matters. No fluff. Based in Singapore.
+                        </p>
+                        <div class="social-links">
+                            <a href="https://twitter.com/iadriantan" target="_blank">X</a>
+                            <a href="https://linkedin.com/in/iadriantan" target="_blank">LinkedIn</a>
+                            <a href="mailto:hello@iadriantan.com">Email</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
 
-    <p class="intro">Highlights this week:</p>
-
-    <div class="summary">
-        <p><strong>Experimentation to Value Capture</strong> — Lloyds came out and said £50 million. Real money. Not a pilot, not a projection — actual value they can point to. They're targeting £100 million next year. That shift from experimentation to accountability? That's the story.</p>
-
-        <p><strong>Readiness is the New Competitive Advantage</strong> — Meanwhile, Mastercard launched a whole suite to help businesses figure out agentic AI. Their line: "Readiness is the new competitive advantage." I'd push back slightly — readiness without execution is just expensive preparation. But the signal is clear. The big players aren't waiting for perfect anymore.</p>
-
-        <p><strong>Lost in Thinking</strong> — AI agents can now talk to each other through protocols like A2A. But here's the catch — they still can't think together. They coordinate like strangers at a conference exchanging business cards, not like a team solving a problem. Autonomous execution and collaborative reasoning? Turns out those are completely different challenges.</p>
-
-        <p><strong>Mark this Up</strong> — One more thing worth watching: Factify just raised $73 million — one of the biggest seed rounds ever — to replace PDFs. Three trillion PDFs floating around, and they're betting the format itself is broken for an AI-first world. Bold. Possibly right</p>
-    </div>
-
-    <h2>Featured Stories</h2>
-
-    <h3>Banking & Financial Services AI</h3>
-
-    <div class="story">
-        <p class="story-title">Banks Reduce Reliance on OpenAI</p>
-        <p class="story-description">Financial institutions are diversifying their AI strategies amid concerns about vendor lock-in and operational costs.</p>
-        <p class="story-source"><a href="https://www.finextra.com/" target="_blank">Finextra</a></p>
-    </div>
-
-    <div class="story">
-        <p class="story-title">Lloyds to Go Deeper into AI After Totting Up Financial Value</p>
-        <p class="story-description">UK banking giant reports £50M in GenAI value for 2025, targets over £100M for 2026 with full rollout of AI-powered financial assistant to 21M customers.</p>
-        <p class="story-source"><a href="https://www.lloydsbankinggroup.com/" target="_blank">Lloyds</a></p>
-    </div>
-
-    <div class="story">
-        <p class="story-title">Mastercard Unveils Agent Suite to Help Businesses Navigate Agentic AI</p>
-        <p class="story-description">Payment giant launches comprehensive platform combining technical support with customizable AI agents, targeting Q2 2026 availability for banks and merchants.</p>
-        <p class="story-source"><a href="https://www.pymnts.com/" target="_blank">PYMNTS</a></p>
-    </div>
-
-    <h3>Document Infrastructure Reimagined</h3>
-
-    <div class="story">
-        <p class="story-title">Factify Raises $73M to Replace PDFs with Intelligent Documents</p>
-        <p class="story-description">Israeli startup secures one of the largest seed rounds ever to rebuild digital documents from the ground up, targeting the estimated 3 trillion PDFs currently in circulation with AI-native alternatives featuring built-in identity, governance, and machine-readability.</p>
-        <p class="story-source"><a href="https://www.forbes.com/" target="_blank">Forbes</a></p>
-    </div>
-
-    <h3>Crypto & Digital Payments</h3>
-
-    <div class="story">
-        <p class="story-title">Bitget Turns Crypto Wallet Into Payment-Centric Finance App</p>
-        <p class="story-description">Major crypto wallet serving 90M+ users pivots from trading focus to everyday finance, introducing unified Pay hub and targeting stablecoin transaction growth that surpassed $10T in 2025.</p>
-        <p class="story-source"><a href="https://www.pymnts.com/" target="_blank">PYMNTS</a></p>
-    </div>
-
-    <h3>Browser & Agent Technology</h3>
-
-    <div class="story">
-        <p class="story-title">New Google Chrome AI Agent Navigates Web for Users</p>
-        <p class="story-description">Chrome introduces "auto browse" feature powered by Gemini 3, enabling AI Pro/Ultra subscribers to delegate complex multi-step tasks like hotel research, form filling, and shopping across the web.</p>
-        <p class="story-source"><a href="https://www.bloomberg.com/" target="_blank">Bloomberg</a></p>
-    </div>
-
-    <h3>Global AI Competition Intensifies</h3>
-
-    <div class="story">
-        <p class="story-title">China's Moonshot Releases Open-Source Kimi K2.5 Model and Coding Agent</p>
-        <p class="story-description">Alibaba-backed startup launches 1T parameter multimodal model that outperforms GPT-5.2 on multiple benchmarks, introduces "agent swarm" for parallel task execution, and releases competing coding tool to Anthropic's Claude Code.</p>
-        <p class="story-source"><a href="https://www.techcrunch.com/" target="_blank">TechCrunch</a></p>
-    </div>
-
-    <h3>AI Agent Communication Challenges</h3>
-
-    <div class="story">
-        <p class="story-title">AI Agents Can Talk to Each Other — They Just Can't Think Together Yet</p>
-        <p class="story-description">While agent-to-agent protocols like A2A enable communication, coordination remains the critical bottleneck as enterprises discover that autonomous execution and collaborative reasoning are distinct challenges requiring different solutions.</p>
-        <p class="story-source"><a href="https://www.venturebeat.com/" target="_blank">VentureBeat</a></p>
-    </div>
-
-    <p style="margin-top: 40px; color: #666; font-size: 14px;">Stay ahead of innovation trends. For deeper analysis on any of these stories, explore the source links above.</p>
-
-    <div class="footer">
-        <p>© 2026 Adrian Tan (iadriantan) · Building in public · Thinking in code</p>
-    </div>
-</body>
-</html>
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Adrian Tan (iadriantan) Â· Building in public Â· Thinking in code</p>
+  
